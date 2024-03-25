@@ -21,15 +21,23 @@ private:
 
 public:
     void SetupGraph(int count) {
-
+        // Allocate Space For Nodes
     }
 
-    void SetupNode(int count) {
+    void SetupNode(int count, std::string label, bool isChargingStation) {
+        // Assign Variables and Allocate Space For Edges
+    }
 
+    int GetNodeCount() {
+        return nodeCount;
+    }
+
+    Node** GetNodes() {
+        return nodes;
     }
 
     void ReadGraphData(std::string path) {
-
+        // Read Graph Data From File
     }
 
     ~Graph() {
@@ -40,11 +48,16 @@ public:
     }
 };
 
-void DijkstraAlgorithm(int count, Node** nodes) {
+void DijkstraAlgorithm(Graph* graph) {
+    int nodeCount = graph->GetNodeCount();
+    Node** nodes = graph->GetNodes();
 
+    // Do Algorithm
 }
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Graph graph;
+    graph.ReadGraphData("...");
+    DijkstraAlgorithm(&graph);
 }
